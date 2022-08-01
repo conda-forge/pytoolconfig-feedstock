@@ -1,5 +1,5 @@
 {% set name = "pytoolconfig" %}
-{% set version = "1.2.1" %}
+{% set version = "1.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pytoolconfig-{{ version }}.tar.gz
-  sha256: 5ac82f78d731531f9f82e5cc7f5ebae9473b1404c0e75aa5ac0b8b41cd99b510
+  sha256: 2512a1f261a40e73cef2e58e786184261b60c802ae7ed01249342b1949ec3aa2
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -16,7 +16,7 @@ build:
 
 requirements:
   host:
-    - pip
+    - pip <22
     - pdm
     - python >=3.6
   run:
