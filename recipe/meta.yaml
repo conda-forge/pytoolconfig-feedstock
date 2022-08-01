@@ -16,9 +16,8 @@ build:
 
 requirements:
   host:
-    - pip
+    - pip <22
     - pdm
-    - html5lib
     - python >=3.6
   run:
     - packaging >=21.3
