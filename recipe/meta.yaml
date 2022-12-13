@@ -18,6 +18,7 @@ requirements:
   host:
     - pip <22
     - pdm
+    - pdm-pep517
     - python >=3.6
   run:
     - packaging >=21.3
