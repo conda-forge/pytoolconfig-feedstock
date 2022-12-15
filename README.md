@@ -1,7 +1,7 @@
 About pytoolconfig
 ==================
 
-Home: https://pypi.org/project/pytoolconfig/
+Home: https://pypi.org/project/pytoolconfig
 
 Package license: LGPL-3.0-or-later
 
