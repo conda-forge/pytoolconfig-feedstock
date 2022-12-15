@@ -1,30 +1,29 @@
-{% set name = "pytoolconfig" %}
 {% set version = "1.2.4" %}
 
 package:
-  name: {{ name|lower }}
+  name: pytoolconfig
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pytoolconfig-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/p/pytoolconfig/pytoolconfig-{{ version }}.tar.gz
   sha256: 5e1a246f77970ddb5f3d8d06fbf162424b8a1adfc22c2eb51826b383bf293d1e
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip <22
     - pdm
-    - pdm-pep517
-    - python >=3.6
+    - pdm-pep517 >=1.0.5
+    - python >=3.7
   run:
-    - packaging >=21.3
-    - python >=3.6
-    - tomli >=2.0
-    - typing-extensions
+    - packaging >=22.0
+    - python >=3.7
+    - tomli >=2.0.1
+    - typing-extensions >=4.4.0
 
 test:
   imports:
@@ -35,7 +34,7 @@ test:
     - pip
 
 about:
-  home: https://pypi.org/project/pytoolconfig/
+  home: https://pypi.org/project/pytoolconfig
   summary: Python tool configuration
   license: LGPL-3.0-or-later
   license_file: LICENSE
