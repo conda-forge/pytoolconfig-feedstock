@@ -18,10 +18,10 @@ requirements:
     - pip <22
     - pdm
     - pdm-pep517 >=1.0.5
-    - python >=3.7
+    - python >=3.7,<3.12
   run:
     - packaging >=22.0
-    - python >=3.7
+    - python >=3.7,<3.12
     - tomli >=2.0.1
     - typing-extensions >=4.4.0
 
