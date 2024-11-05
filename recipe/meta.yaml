@@ -1,4 +1,4 @@
-{% set version = "1.2.5" %}
+{% set version = "1.2.6" %}
 
 package:
   name: pytoolconfig
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pytoolconfig/pytoolconfig-{{ version }}.tar.gz
-  sha256: a50f9dfe23b03a9d40414c1fdf902fefbeae12f2ac75a3c8f915944d6ffac279
+  sha256: f2d00ea4f8cbdffd3006780ba51016618c835b338f634e3f7f8b2715b1710889
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -18,10 +18,10 @@ requirements:
     - pip <22
     - pdm
     - pdm-pep517 >=1.0.5
-    - python >=3.7
+    - python >=3.7,<3.12
   run:
     - packaging >=22.0
-    - python >=3.7
+    - python >=3.7,<3.12
     - tomli >=2.0.1
     - typing-extensions >=4.4.0
 
