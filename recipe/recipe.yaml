@@ -1,32 +1,30 @@
 schema_version: 1
 
 context:
-  version: "1.2.5"
+  version: 1.3.1
 
 package:
   name: pytoolconfig
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/p/pytoolconfig/pytoolconfig-${{ version }}.tar.gz
-  sha256: a50f9dfe23b03a9d40414c1fdf902fefbeae12f2ac75a3c8f915944d6ffac279
+- url: https://files.pythonhosted.org/packages/source/p/pytoolconfig/pytoolconfig-${{ version }}.tar.gz
+  sha256: 51e6bd1a6f108238ae6aab6a65e5eed5e75d456be1c2bf29b04e5c1e7d7adbae
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - pip <22
-    - pdm
-    - pdm-pep517 >=1.0.5
+    - pip
+    - pdm-backend >=1.0.5
     - python ${{ python_min }}.*
   run:
-    - packaging >=22.0
+    - packaging >=23.2
     - python >=${{ python_min }}
     - tomli >=2.0.1
-    - typing-extensions >=4.4.0
 
 tests:
   - python:
